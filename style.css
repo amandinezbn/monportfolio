@@ -1,0 +1,522 @@
+/* =======================
+   FONTS
+======================= */
+@font-face {
+    font-family: 'PP Pangaia';
+    src: url('PPPangaia-Regular.woff2') format('woff2'),
+         url('PPPangaia-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PP Pangaia';
+    src: url('PPPangaia-RegularItalic.woff2') format('woff2'),
+         url('PPPangaia-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }  
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+/* =======================
+   RESET
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* =======================
+   HEADER / MENU
+======================= */
+/* HEADER ET NAVBAR */
+header {
+    position: absolute; /* pour être directement sur l'image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: transparent !important; /* supprime tout fond */
+    box-shadow: none; /* supprime ombres */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: transparent; /* totalement transparent */
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    background: transparent; /* pas de fond sur mobile */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff; /* texte blanc */
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+/* BURGER MENU */
+.burger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* MOBILE MENU */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 1rem;
+        background: rgba(0,0,0,0.3); /* léger fond pour lisibilité sur mobile */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+/* MOBILE MENU */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 1rem;
+        background: rgba(0,0,0,0.3); /* léger fond pour lisibilité */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+/* =======================
+   HERO / ACCUEIL
+======================= */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('arrière plan.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* overlay léger pour lisibilité du texte */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 0;
+}
+
+.hero h1, .hero p, .read-more {
+    position: relative; /* texte au-dessus de l'image */
+    z-index: 1;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+/* HERO TITLES */
+.hero h1 {
+    text-align: center;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 7rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #fff;
+    font-family: 'PP Pangaia', serif;
+    text-transform: none;
+}
+
+.title-special {
+    font-size: 7rem;
+    font-family: 'PP Pangaia', serif;
+    font-weight: normal;
+    font-style: italic;
+    color: #ffffff;
+    text-transform: none;
+    letter-spacing: 4px;
+    display: block;
+    margin-top: -2rem;
+}
+
+/* HERO PARAGRAPH */
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* READ MORE BUTTON */
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 0.8rem 1.5rem;
+    background-color: rgb(253, 236, 228);
+    color: #000000;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.read-more .arrow {
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.read-more:hover {
+    background-color: #f39c12;
+    transform: translateY(-3px);
+}
+
+.read-more:hover .arrow {
+    transform: translateY(3px);
+}
+
+/* =======================
+   SECTIONS
+======================= */
+.section {
+    padding: 4rem 2rem;
+    min-height: 60vh;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #f39c12;
+}
+
+.section p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* =======================
+   À PROPOS
+======================= */
+/* =======================
+   À PROPOS
+======================= */
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto; /* espace autour de la bulle */
+    
+    /* BULLE */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem 3rem;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px; /* coins légèrement arrondis pour l'image */
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 1;
+    text-align: justify; /* texte justifié */
+}
+
+.about-text h2 {
+    font-family: 'Poppins', sans-serif; /* police Poppins */
+    font-weight: 700;
+    font-size: 3rem;
+    color: #000;
+    margin-bottom: 1rem;
+    text-align: left; /* ou center si tu veux centrer */
+    letter-spacing: normal;
+    line-height: 1.1; /* réduit l'écart entre les lignes */
+    margin-bottom: 3rem; /* espace plus grand entre le titre et le texte */
+}
+
+.about-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify; /* texte justifié seulement ici */
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* image au-dessus, texte en dessous */
+        gap: 1.5rem;
+        padding: 1.5rem 2rem;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+
+/* =======================
+   EXPÉRIENCES
+======================= */
+.experiences {
+    text-align: center;
+    background-color: #fef7f4; /* couleur de fond du bloc, tu peux changer #f2f2f2 */
+    padding: 4rem 2rem; /* espace intérieur pour que le contenu ne touche pas les bords */
+   
+    margin: 2rem 0; /* espace au-dessus et en dessous */
+}
+.experiences h2 {
+    font-family: 'PP Pangaia', serif;
+    font-size: 6rem;
+    color: #000;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.experiences h2 .italic {
+    font-style: italic; /* rend uniquement “professionnelles” en italique */
+}
+
+.experience-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.experience-card {
+    display: block;
+    width: 300px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-family: 'PP Pangaia', serif; /* Ajout de la police PP Pangaia */
+
+}
+
+.experience-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.experience-card .card-title {
+    background-color: #e9a3a4;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+    
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVE EXPÉRIENCES */
+@media screen and (max-width: 768px) {
+    .experience-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experience-card {
+        width: 80%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #222;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* =======================
+   SCROLL FLUIDE
+======================= */
+html {
+    scroll-behavior: smooth;
+}
+
+/* =======================
+   PROJETS
+======================= */
+/* =======================
+   PROJETS
+======================= */
+#projets {
+    text-align: center;
+    background-color: #ffffff; /* optionnel : fond léger */
+    padding: 4rem 2rem;
+}
+
+#projets h2 {
+    font-family: 'PP Pangaia', serif;
+    font-size: 6rem; /* titre bien gros */
+    color: #000;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+#projets p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* BOUTON VOIR LES PROJETS */
+#projets .btn-projects {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #f39c12;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#projets .btn-projects:hover {
+    background-color: #e67e22;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE PROJETS */
+@media screen and (max-width: 768px) {
+    #projets h2 {
+        font-size: 4rem; /* réduit la taille du titre */
+    }
+
+    #projets p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    #projets .btn-projects {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+}
+.contact-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #fef7f4; /* couleur douce de fond */
+}
+
+.contact-section h2 {
+    font-family: 'PP Pangaia', serif;
+    font-size: 4rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.contact-section p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-section a {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}

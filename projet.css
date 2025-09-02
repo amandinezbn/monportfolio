@@ -1,0 +1,177 @@
+.projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.project {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.project-image {
+    flex: 1;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.project-text {
+    flex: 1;
+    text-align: left;
+    font-family: 'PP Pangaia', serif;
+
+}
+
+.project-title {
+    font-family: 'PP Pangaia', serif;
+    font-size: 3rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.project-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Pastilles compétences */
+.project-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-skills .skill {
+    background-color: #fea323;
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-text {
+        text-align: center;
+    }
+
+    .project-image img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .project-skills {
+        justify-content: center;
+    }
+}
+
+/* =======================
+   HEADER / MENU
+======================= */
+/* HEADER ET NAVBAR */
+header {
+    position: absolute; /* pour être directement sur l'image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: #fffbf4!important; /* supprime tout fond */
+    box-shadow: none; /* supprime ombres */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: transparent; /* totalement transparent */
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    background: transparent; /* pas de fond sur mobile */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000; /* texte blanc */
+    transition: color 0.3s;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+/* BURGER MENU */
+.burger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* MOBILE MENU */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 1rem;
+        background: rgba(0,0,0,0.3); /* léger fond pour lisibilité sur mobile */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+/* MOBILE MENU */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 1rem;
+        background: rgba(0,0,0,0.3); /* léger fond pour lisibilité */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+}

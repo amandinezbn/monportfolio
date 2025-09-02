@@ -1,0 +1,150 @@
+* =======================
+   FONTS
+======================= */
+@font-face {
+    font-family: 'PP Pangaia';
+    src: url('PPPangaia-Regular.woff2') format('woff2'),
+         url('PPPangaia-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PP Pangaia';
+    src: url('PPPangaia-RegularItalic.woff2') format('woff2'),
+         url('PPPangaia-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }  
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .stage-page {
+    padding: 5rem 2rem;
+    background-color: #fff4ef;
+}
+
+.stage-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stage-text {
+    flex: 1;
+    text-align: left;
+}
+
+.stage-text .stage-title {
+    font-family: 'PP Pangaia', serif;
+    font-size: 8rem;
+    font-weight: normal; 
+    font-style: italic;
+    color: #000;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.stage-text p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;      /* limite largeur texte */
+    margin: 0 auto;        /* centre horizontalement */
+}
+
+.stage-image {
+    flex: 1;
+}
+
+.stage-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .stage-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .stage-text {
+        text-align: center;
+    }
+
+    .stage-image img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* Sous-titre agence */
+.stage-agency {
+    text-align: center;
+    margin: 3rem auto 2rem auto;
+    max-width: 800px;      /* limite largeur pour rapprocher du centre */
+}
+
+.agency-title {
+    font-family: 'PP Pangaia', serif;
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    color: #000;
+    font-weight: normal;
+}
+
+.agency-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Bloc de texte détaillé */
+.stage-description {
+    text-align: center;
+    margin: 0 auto 2rem auto;
+    max-width: 800px;      /* limite largeur texte */
+}
+
+.stage-description p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Pastilles compétences */
+.stage-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.stage-skills .skill {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+}

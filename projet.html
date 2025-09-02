@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Projets</title>
+  <link rel="stylesheet" href="projet.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <!-- ton menu ici -->
+    <nav class="navbar">
+      <div class="logo">MonSite</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html#apropos">À propos</a></li>
+        <li><a href="index.html#experiences">Expériences Pro</a></li>
+        <li><a href="index.html#projet">Projets</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="burger">&#9776;</div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="projects-page">
+      
+        <section class="projects">
+            <!-- Projet 1 -->
+            <div class="project">
+                <div class="project-image">
+                    <img src="téléphone.png" alt="Projet 1">
+                </div>
+                <div class="project-text">
+                    <h3 class="project-title">Identité visuelle</h3>
+                    <p class="project-subtitle">Ceci est un projet personnel sous la demande du directeur de l'établissement. Ce travail m'a demandé de concevoir un logo ainsi qu'une carte de visite. 
+                        <br><br> Outils utilisés : <br> Photoshop et Canva
+                    </p>
+        
+                    <div class="project-skills">
+                        <span class="skill">Graphisme</span>
+                        <span class="skill">Communication</span>
+                        <span class="skill">Montage photo</span>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Projet 2 -->
+            <div class="project">
+                <div class="project-image">
+                    <img src="Capture d’écran 2025-09-02 à 00.09.05.png" alt="Projet 2">
+                </div>
+                <div class="project-text">
+                    <h3 class="project-title">Communication multicanal</h3>
+                    <p class="project-subtitle">Nous avons été missionné par France Travail qui souhaite communiquer sur les nouvelles modalités du RSA auprès de ses conseillers et de ses allocataires jusqu’en juin 2025.
+                        <br>Ainsi, nous avons proposé une communication multicanal pour avertir ces derniers.
+                    </p>
+        
+                    <div class="project-skills">
+                        <span class="skill">Création visuelle</span>
+                        <span class="skill">Veille informationnelle</span>
+                        <span class="skill">Stratégie de communication</span>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Projet 3 -->
+            <div class="project">
+                <div class="project-image">
+                    <img src="affiche rue.png" alt="Projet 3">
+                </div>
+                <div class="project-text">
+                    <h3 class="project-title">Affiche</h3>
+                    <p class="project-subtitle">Le but de ce travail est d'allier un objet de la vie quotidienne à une scène d'horreur, c'est-à-dire de combiner deux éléments opposés, en l'occurrence ici un rouge à lèvres Chanel qui a une connotation élégante et glamour, avec des insectes qui reflètent le dégoût et la répulsion.</p>
+        
+                    <div class="project-skills">
+                        <span class="skill">Graphisme</span>
+                        <span class="skill">Photoshop</span>
+                        <span class="skill">Créativité</span>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Projet 4 -->
+            <div class="project">
+                <div class="project-image">
+                    <img src="décatlon.png" alt="Projet 4">
+                </div>
+                <div class="project-text">
+                    <h3 class="project-title">Démarche RSE</h3>
+                    <p class="project-subtitle">Ce projet fait partie d'un travail de groupe dans le cadre de notre cours "Démarche RSE", portant sur une demande précise : "Proposer un plan de communication RSE pour la marque Decathlon". L’objectif de ce projet est d’identifier une cause RSE absente de la marque et de proposer un plan de communication structuré pour mettre en œuvre cette démarche RSE de manière efficace. Nous nous adressons donc ici directement à Décatlon.</p>
+        
+                    <div class="project-skills">
+                        <span class="skill">Analyse de la marque</span>
+                        <span class="skill">Veille informationnelle</span>
+                        <span class="skill">Veille concurrentielle</span>
+                        <span class="skill">Réflexion RSE</span>
+                        <span class="skill">Stratégie de communication</span>
+                    </div>
+
+                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MonSite - Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
